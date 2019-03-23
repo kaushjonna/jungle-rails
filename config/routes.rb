@@ -11,8 +11,8 @@ Rails.application.routes.draw do
   end
 
   resources :orders, only: [:create, :show]
-
   resources :users, except:[:edit, :update, :show]
+  resources :sessions, except:[:edit, :update, :show]
 
   namespace :admin do
     root to: 'dashboard#show'
